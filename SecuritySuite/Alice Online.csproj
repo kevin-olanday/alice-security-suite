@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{21E23158-8144-4741-8F6D-88552A2FBDA8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Alice_Online</RootNamespace>
+    <AssemblyName>Alice Online</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Management.Automation.6.1.7601.17515\lib\net45\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CreatePartnerAccount.aspx" />
+    <Content Include="css\main.css" />
+    <Content Include="css\navbar.css" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\linecons.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\raleway.css" />
+    <Content Include="FeedTest.aspx" />
+    <Content Include="Images\therearenocentaursinoxford.png" />
+    <Content Include="Js\jquery.animsition.min.js" />
+    <Content Include="Js\jquery.min.js" />
+    <Content Include="RenameSharedMailbox.aspx" />
+    <Content Include="CheckFolderApprovers.aspx" />
+    <Content Include="Aporia.aspx" />
+    <Content Include="bin\Alice Online.dll" />
+    <Content Include="bin\Alice Online.pdb" />
+    <Content Include="Comparo.aspx" />
+    <Content Include="CreateADGroup.aspx" />
+    <Content Include="ConvertGenericAccount.aspx" />
+    <Content Include="CreateGenericAccount.aspx" />
+    <Content Include="CreateResourceCalendar.aspx" />
+    <Content Include="CreateSharedMailbox.aspx" />
+    <Content Include="Fonts\codropsicons\codropsicons.svg" />
+    <Content Include="Fonts\codropsicons\license.txt" />
+    <Content Include="About.aspx" />
+    <Content Include="Images\abouticon.png" />
+    <Content Include="Images\alicebackground.png" />
+    <Content Include="Images\alicebutton.png" />
+    <Content Include="Images\AliceIcon.ico" />
+    <Content Include="Images\contacticon.png" />
+    <Content Include="Images\homeicon.png" />
+    <Content Include="Images\maclogo.png" />
+    <Content Include="Images\servicesicon.png" />
+    <Content Include="Images\usericon.png" />
+    <Content Include="Js\classie.js" />
+    <Content Include="Js\mlpushmenu.js" />
+    <Content Include="Js\modernizr.custom.js" />
+    <Content Include="Js\popup.js" />
+    <Content Include="packages.config" />
+    <Content Include="CreateServerGroup.aspx" />
+    <Content Include="CreateFolderPermissionGroup.aspx" />
+    <Content Include="Fonts\Raleway-Regular.ttf" />
+    <Content Include="Fonts\Raleway-Bold.ttf" />
+    <Content Include="Fonts\Raleway-Italic.ttf" />
+    <Content Include="Fonts\Raleway-BoldItalic.ttf" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="PopupMenus\Favorites.html" />
+    <Content Include="PopupMenus\AD Groups.html" />
+    <Content Include="PopupMenus\Calendars.html" />
+    <Content Include="PopupMenus\Server Groups.html" />
+    <Content Include="PopupMenus\Gen. Accounts.html" />
+    <Content Include="PopupMenus\Mailboxes.html" />
+    <Content Include="PopupMenus\AD Queries.html" />
+    <Content Include="PopupMenus\Shared Folders.html" />
+    <Content Include="PopupMenus\PopupStyle.css" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="ViewFolderPermissionGroup.aspx" />
+    <Content Include="ViewServerGroup.aspx" />
+    <Content Include="Fonts\.DS_Store" />
+    <Content Include="Fonts\codropsicons\.DS_Store" />
+    <Content Include="Fonts\codropsicons\codropsicons.eot" />
+    <Content Include="Fonts\codropsicons\codropsicons.ttf" />
+    <Content Include="Fonts\codropsicons\codropsicons.woff" />
+    <None Include="Properties\PublishProfiles\Alice.pubxml" />
+    <Content Include="Alice.Master" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <None Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Home.aspx" />
+    <Content Include="Images\aporialogo.png" />
+    <Content Include="Images\createacglogo.png" />
+    <Content Include="Images\createagglogo.png" />
+    <Content Include="Images\createapplogo.png" />
+    <Content Include="Images\createcalendarlogo.png" />
+    <Content Include="Images\createdglogo.png" />
+    <Content Include="Images\createdmdllogo.png" />
+    <Content Include="Images\creategenalogo.png" />
+    <Content Include="Images\createmailboxlogo.png" />
+    <Content Include="Images\createfolderpermissiongrouplogo.png" />
+    <Content Include="Images\createradllogo.png" />
+    <Content Include="Images\createservergrouplogo.png" />
+    <Content Include="Images\createsmdllogo.png" />
+    <Content Include="Images\createuserlogo.png" />
+    <Content Include="Images\modifygenalogo.png" />
+    <Content Include="Images\navicon.png" />
+    <Content Include="Images\renamecalendarlogo.png" />
+    <Content Include="Images\renamemailboxlogo.png" />
+    <Content Include="Images\viewfolderpermissiongrouplogo.png" />
+    <Content Include="Images\viewservergroupslogo.png" />
+    <Content Include="Images\weblogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreatePartnerAccount.aspx.cs">
+      <DependentUpon>CreatePartnerAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePartnerAccount.aspx.designer.cs">
+      <DependentUpon>CreatePartnerAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedTest.aspx.cs">
+      <DependentUpon>FeedTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedTest.aspx.designer.cs">
+      <DependentUpon>FeedTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RenameSharedMailbox.aspx.cs">
+      <DependentUpon>RenameSharedMailbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RenameSharedMailbox.aspx.designer.cs">
+      <DependentUpon>RenameSharedMailbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckFolderApprovers.aspx.cs">
+      <DependentUpon>CheckFolderApprovers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckFolderApprovers.aspx.designer.cs">
+      <DependentUpon>CheckFolderApprovers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aporia.aspx.cs">
+      <DependentUpon>Aporia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aporia.aspx.designer.cs">
+      <DependentUpon>Aporia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comparo.aspx.cs">
+      <DependentUpon>Comparo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comparo.aspx.designer.cs">
+      <DependentUpon>Comparo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateADGroup.aspx.cs">
+      <DependentUpon>CreateADGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateADGroup.aspx.designer.cs">
+      <DependentUpon>CreateADGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConvertGenericAccount.aspx.cs">
+      <DependentUpon>ConvertGenericAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConvertGenericAccount.aspx.designer.cs">
+      <DependentUpon>ConvertGenericAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateGenericAccount.aspx.cs">
+      <DependentUpon>CreateGenericAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateGenericAccount.aspx.designer.cs">
+      <DependentUpon>CreateGenericAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateResourceCalendar.aspx.cs">
+      <DependentUpon>CreateResourceCalendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateResourceCalendar.aspx.designer.cs">
+      <DependentUpon>CreateResourceCalendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateSharedMailbox.aspx.cs">
+      <DependentUpon>CreateSharedMailbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateSharedMailbox.aspx.designer.cs">
+      <DependentUpon>CreateSharedMailbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateServerGroup.aspx.cs">
+      <DependentUpon>CreateServerGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateServerGroup.aspx.designer.cs">
+      <DependentUpon>CreateServerGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alice.Master.cs">
+      <DependentUpon>Alice.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alice.Master.designer.cs">
+      <DependentUpon>Alice.Master</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="CreateFolderPermissionGroup.aspx.cs">
+      <DependentUpon>CreateFolderPermissionGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateFolderPermissionGroup.aspx.designer.cs">
+      <DependentUpon>CreateFolderPermissionGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFolderPermissionGroup.aspx.cs">
+      <DependentUpon>ViewFolderPermissionGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewFolderPermissionGroup.aspx.designer.cs">
+      <DependentUpon>ViewFolderPermissionGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewServerGroup.aspx.cs">
+      <DependentUpon>ViewServerGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewServerGroup.aspx.designer.cs">
+      <DependentUpon>ViewServerGroup.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>23589</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:23589/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

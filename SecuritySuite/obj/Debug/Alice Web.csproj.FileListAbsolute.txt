@@ -1,0 +1,6 @@
+C:\Site\Alice Web\Alice Web\bin\Alice Web.dll.config
+C:\Site\Alice Web\Alice Web\bin\Alice Web.dll
+C:\Site\Alice Web\Alice Web\bin\Alice Web.pdb
+C:\Site\Alice Web\Alice Web\obj\Debug\Alice Web.csprojResolveAssemblyReference.cache
+C:\Site\Alice Web\Alice Web\obj\Debug\Alice Web.dll
+C:\Site\Alice Web\Alice Web\obj\Debug\Alice Web.pdb

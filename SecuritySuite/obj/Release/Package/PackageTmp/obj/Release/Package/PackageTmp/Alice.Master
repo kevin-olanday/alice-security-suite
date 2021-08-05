@@ -1,0 +1,261 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Alice.Master.cs" Inherits="AliceOnline.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALICE -<%: Page.Title %> </title>
+
+    <link href="~/Images/AliceIcon.ico" rel="shortcut icon" runat="server"/>
+
+    <!-- Fonts -->
+     <link rel="stylesheet" href="css/raleway.css">
+
+  	<!-- Stylesheet -->
+     <link rel="stylesheet" href="css/main.css" ... />
+     <link rel="stylesheet" href="css/navbar.css" ... />
+     <link rel="stylesheet" href="css/linecons.css" ... />
+
+    <!-- Include jQuery -->
+	 <script type="text/javascript" src="js/jquery.min.js"></script>
+     <script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
+     <script type="text/javascript" src="js/modernizr.custom.js"></script>
+     <script type="text/javascript" src="js/popup.js"></script>
+
+         <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+                </asp:ContentPlaceHolder>
+</head>
+
+ <body  style="text-align:center">
+  
+     <form runat="server">
+    
+         <div id="navbar" > 
+            <ul style="float:left"> 
+	        <li id="nav-button-home"><a href="Home.Aspx">Home</a></li> 
+            <li id ="nav-button-about"><a href="http://alice/">About</a></li> 
+	        <li id ="nav-button-contact"><a href="#">Contact</a></li> 
+          </ul> 
+          <ul style="text-align:right">
+            <li id="nav-button-user"><a>Logged in as <%: System.Security.Principal.WindowsIdentity.GetCurrent().Name  %></a></li> 
+          </ul>
+         </div> <!-- navbar -->
+
+       	<div class="container"> 
+			<div class="mp-pusher" id="mp-pusher"> 
+				<nav id="mp-menu" class="mp-menu">
+					<div class="mp-level"> 
+						<h2 class="icon icon-world">All Services</h2>
+						<ul>
+							<li class="icon icon-arrow-left">
+								<a class="icon icon-user" href="#">Users</a>
+								<div class="mp-level">
+									<h2 class="icon icon-user">Users</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li ><a class="icon icon-user" href="CreatePartnerAccount.aspx">Create Partner Account</a></li>
+										<li ><a class="icon icon-eye" href="#">View Account</a></li>
+								</ul>
+								</div>
+							</li>
+							<li class="icon icon-arrow-left">
+								<a class="icon icon-world" href="#">Groups</a>
+								<div class="mp-level">
+									<h2 class="icon icon-world">Groups</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li><a class="icon icon-world" href="CreateADGroup.aspx">Create AD Group</a></li>
+                                        <li><a class="icon icon-eye" href="#">View AD Group</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="icon icon-arrow-left">
+								<a class="icon icon-star" href="#">Generic Accounts</a>
+								<div class="mp-level">
+									<h2 class="icon icon-star">Generic Accounts</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li class="icon icon-arrow-left">
+											<a class="icon icon-star" href="CreateGenericAccount.aspx">Create Generic Account</a>
+										</li>
+                                        <li>
+											<a class="icon icon-eye" href="#">View Generic Account</a>
+										</li>
+										<li>
+											<a class="icon icon-pen" href="ConvertGenericAccount.aspx">Convert Generic Account</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+                            <li class="icon icon-arrow-left">
+								<a class="icon icon-note" href="#">Reports</a>
+								<div class="mp-level">
+									<h2 class="icon icon-news">Reports</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li class="icon icon-arrow-left">
+											<a class="icon icon-search" href="Aporia.aspx">Aporia</a>
+										</li>
+                                        <li>
+											<a class="icon icon-search" href="Comparo.Aspx">Comparo</a>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+                            <li class="icon icon-arrow-left">
+							    <a class="icon icon-data" href="#">Resources</a>
+                     				<div class="mp-level">
+									<h2 class="icon icon-data">Resources</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li class="icon icon-arrow-left">
+											<a class="icon icon-mail" href="CreateSharedMailbox.aspx">Create Mailbox</a>
+										</li>
+                                        <li>
+											<a class="icon icon-calendar" href="CreateResourceCalendar.aspx">Create Shared Calendar</a>
+										</li>
+                                        <li>
+											<a class="icon icon-pen" href="RenameSharedMailbox.aspx">Rename Mailbox</a>
+										</li>
+                                        <li>
+											<a class="icon icon-pen" href="#">Rename Calendar</a>
+										</li>
+
+									</ul>
+								</div>
+                              <li class="icon icon-arrow-left">
+							    <a class="icon icon-display" href="#">Server Groups</a>
+                     				<div class="mp-level">
+									<h2 class="icon icon-display">Resources</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li class="icon icon-arrow-left">
+											<a class="icon icon-display" href="CreateServerGroup.aspx">Create Server Groups</a>
+										</li>
+                                        <li>
+											<a class="icon icon-eye" href="ViewServerGroup.aspx">View Server Groups</a>
+										</li>
+
+                                    </ul>
+                                </div>
+                              <li class="icon icon-arrow-left">
+                                  <a class="icon icon-wallet" href="#">Shared Folders</a>
+                                  <div class="mp-level">
+									<h2 class="icon icon-wallet">Shared Folders</h2>
+                                    <a class="mp-back" href="#">back</a>
+                                    <ul>
+                                        <li class="icon icon-arrow-left">
+											<a class="icon icon-wallet" href="CreateFolderPermissionGroup.aspx">Create Folder Permission Groups</a>
+										</li>
+                                        <li class="icon icon-arrow-left">
+											<a class="icon icon-eye" href="ViewFolderPermissionGroup.aspx">View Folder Permission Groups</a>
+										</li>
+                                         <li class="icon icon-arrow-left">
+											<a class="icon icon-lock" href="CheckFolderApprovers.aspx">Check Folder Approvers</a>
+										</li>
+                                      
+                                    </ul>
+			    				</div>
+                          
+                                
+                            <h2 class="icon icon-world">Quick Links</h2>
+						    <ul>
+                             <li class="icon icon-arrow-left">
+							     <a href="#"><img src="images/maclogo.png" />&nbsp;Macquarie Portals</a>
+                     				<div class="mp-level">
+									<h2 class="icon icon-display">Macquarie Portals</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li class="icon icon-arrow-left">
+											<a class="icon icon-clip" href="https://confluence.internal.macquarie.com/display/SecOps/COG+Tech+ETD+Security+Operations+Home">Sec Ops Confluence</a>
+										</li>
+                                        <li>
+											<a class="icon icon-clip" href="https://edmzpar/par/main.asp">SAPM</a>
+										</li>
+                                         <li>
+											<a class="icon icon-clip" href="https://ficsydapp48.macbank:8889/security/sec_main">Macquarie Security</a>
+										</li>
+                                           <li>
+											<a class="icon icon-clip" href="https://ntsydinp901.macbank:8443/webadmin/viewLogin.action">Identikey - Vasco</a>
+										</li>
+                                           <li>
+											<a class="icon icon-clip" href="https://ntsydasp1374:998/Account/LogOn?ReturnUrl=%2fQueryAssets">Asset Management</a>
+										</li>
+                                        <li>
+											<a class="icon icon-clip" href="http://itgportal.pc.internal.macquarie.com/sites/iRisk/iriskpolicies/Policies%20Related%20Links/Requests%20for%20access%20to%20staff%20electronic%20records.pdf">Access to Staff Document</a>
+										</li>
+                                        <li>
+											<a class="icon icon-clip" href="http://ntsyddbp1189:53607/Reports/Pages/Report.aspx?ItemPath=%2fITS+Reports%2fOracleLookupOMS">Oracle Lookup </a>
+										</li>
+                                        <li>
+											<a class="icon icon-clip" href="http://mapslite">Mapslite</a>
+										</li>
+                                        <li>
+											<a class="icon icon-clip" href="https://pshrprodss.lb.macbank/psp/HR91PRD1_SS/">Leave Application</a>
+										</li>
+                                    </ul>
+    							</div>
+                             <li class="icon icon-arrow-left">
+							    <a class="icon icon-lock">Approver Lists</a>
+                     				<div class="mp-level">
+									<h2 class="icon icon-lock">Approver Lists</h2>
+									<a class="mp-back" href="#">back</a>
+									<ul>
+										<li class="icon icon-arrow-left">
+											<a class="icon icon-lock" href="https://confluence.internal.macquarie.com/display/OTAWORKSPACE/Updated+List+of+Service+Owners">SSO</a>
+										</li>
+                                        <li>
+											<a class="icon icon-lock" href="http://itgportal.pc.internal.macquarie.com/sites/iRisk/Documents/List%20of%20MOT%20ARMs.pdf ">ARM</a>
+										</li>
+                                         <li>
+											<a class="icon icon-lock" href="http://macnet.internal.macquarie.com/central/connecting/contacts/borm">BORM</a>
+										</li>
+                                           <li>
+											<a class="icon icon-lock" href="http://itgportal.pc.internal.macquarie.com/sites/DBAGroupGlobal/DBAOperationsTeam/Lists/DCM%20Approvers%20List/All%20Items.aspx">DCM</a>
+										</li>
+                                         <li>
+											<a class="icon icon-lock" href="http://macnet.internal.macquarie.com/central/connecting/contacts/grp-heads">Group Heads</a>
+										</li>
+                                           <li>
+											<a class="icon icon-lock" href="http://itgportal.pc.internal.macquarie.com/sites/ITGITSManila/Manila%20SecOps/Lists/Online%20Form%20%20Application%20Based/AllItems.aspx?SortField=LinkTitle&SortDir=Asc&View={A9386219-B0E6-4857-A571-51AF3A4B394B}&FilterField1=LinkTitle&FilterValue1=MOD%20%2D%20L%26D%20Calypso%20%2D%20Finance%20FICC">Secure Online</a>
+										</li>
+                    
+                                    </ul>
+    							</div>
+						</ul>
+							
+					</div> <!-- mp-level -->
+                  
+				</nav>
+         <div id="startbutton"><a href="#" id="trigger" class="menu-trigger"><img id="startbuttonimage" class="shake" src="images/alicebutton.png" /></a></div>
+
+           
+		   	
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+		   	
+			</div> <!-- mp-pusher -->
+		</div> <!-- container -->
+                      
+		<script src="js/classie.js"></script>
+		<script src="js/mlpushmenu.js"></script>
+		<script>
+		    new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('trigger'));
+		</script>
+   
+    </form>
+       <div id="footer">
+           <p  id="footertext" style="font-size:18px;"> <a style="text-decoration: none;color:#f3f3f3;" href="home.aspx">ALICE Online</a> | <a style="text-decoration: none;color:#f3f3f3;" href="http://securitysuite">Security Suite</a></p>
+       </div>
+     
+<div class="box">
+  <span class="close"></span>
+ <p></p><br />
+    <div>
+        </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+C:\Site\Alice Web\Alice Web\bin\Alice Web.dll.config
+C:\Site\Alice Web\Alice Web\bin\Alice Web.dll
+C:\Site\Alice Web\Alice Web\bin\Alice Web.pdb
+C:\Site\Alice Web\Alice Web\obj\Release\Alice Web.dll
+C:\Site\Alice Web\Alice Web\obj\Release\Alice Web.pdb

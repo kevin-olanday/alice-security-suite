@@ -1,0 +1,21 @@
+C:\Site\Alice Online\Alice Online\bin\Alice Online.dll.config
+C:\Site\Alice Online\Alice Online\bin\Alice Online.dll
+C:\Site\Alice Online\Alice Online\bin\Alice Online.pdb
+C:\Site\Alice Online\Alice Online\bin\System.Management.Automation.dll
+C:\Site\Alice Online\Alice Online\obj\Release\Alice Online.dll
+C:\Site\Alice Online\Alice Online\obj\Release\Alice Online.pdb
+C:\Site\Alice Online\Alice Online\obj\Release\Alice Online.csprojResolveAssemblyReference.cache
+C:\Temp\BACKUP\Alice Online\Alice Online\bin\Alice Online.dll.config
+C:\Temp\BACKUP\Alice Online\Alice Online\bin\Alice Online.dll
+C:\Temp\BACKUP\Alice Online\Alice Online\bin\Alice Online.pdb
+C:\Temp\BACKUP\Alice Online\Alice Online\bin\System.Management.Automation.dll
+C:\Temp\BACKUP\Alice Online\Alice Online\obj\Release\Alice Online.dll
+C:\Temp\BACKUP\Alice Online\Alice Online\obj\Release\Alice Online.pdb
+C:\Temp\BACKUP\Alice Online\Alice Online\obj\Release\Alice Online.csprojResolveAssemblyReference.cache
+C:\Applications\Alice Online\Alice Online\bin\Alice Online.dll.config
+C:\Applications\Alice Online\Alice Online\bin\Alice Online.dll
+C:\Applications\Alice Online\Alice Online\bin\Alice Online.pdb
+C:\Applications\Alice Online\Alice Online\bin\System.Management.Automation.dll
+C:\Applications\Alice Online\Alice Online\obj\Release\Alice Online.csprojResolveAssemblyReference.cache
+C:\Applications\Alice Online\Alice Online\obj\Release\Alice Online.dll
+C:\Applications\Alice Online\Alice Online\obj\Release\Alice Online.pdb

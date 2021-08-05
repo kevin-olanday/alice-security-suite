@@ -1,0 +1,674 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A87A390-D433-429B-80EF-1A149E0EC448}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Alice_Web</RootNamespace>
+    <AssemblyName>Alice Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Management.Automation.dll.10.0.10586.0\lib\net40\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Alice Online.idc" />
+    <Content Include="Alice.Master" />
+    <Content Include="ALICEConvertGenericAccount.log" />
+    <Content Include="bin\Alice Web.dll" />
+    <Content Include="bin\Alice Web.pdb" />
+    <Content Include="Fonts\.DS_Store" />
+    <Content Include="Fonts\less\animated.less" />
+    <Content Include="Fonts\less\bordered-pulled.less" />
+    <Content Include="Fonts\less\core.less" />
+    <Content Include="Fonts\less\fixed-width.less" />
+    <Content Include="Fonts\less\font-awesome.less" />
+    <Content Include="Fonts\less\icons.less" />
+    <Content Include="Fonts\less\larger.less" />
+    <Content Include="Fonts\less\list.less" />
+    <Content Include="Fonts\less\mixins.less" />
+    <Content Include="Fonts\less\path.less" />
+    <Content Include="Fonts\less\rotated-flipped.less" />
+    <Content Include="Fonts\less\stacked.less" />
+    <Content Include="Fonts\less\variables.less" />
+    <Content Include="Fonts\linecons\linecons.eot" />
+    <Content Include="Fonts\linecons\linecons.ttf" />
+    <Content Include="Fonts\linecons\linecons.woff" />
+    <Content Include="Fonts\Raleway-Black.ttf" />
+    <Content Include="Fonts\Raleway-BlackItalic.ttf" />
+    <Content Include="Fonts\Raleway-Bold.ttf" />
+    <Content Include="Fonts\Raleway-BoldItalic.ttf" />
+    <Content Include="Fonts\Raleway-ExtraBold.ttf" />
+    <Content Include="Fonts\Raleway-ExtraBoldItalic.ttf" />
+    <Content Include="Fonts\Raleway-ExtraLight.ttf" />
+    <Content Include="Fonts\Raleway-ExtraLightItalic.ttf" />
+    <Content Include="Fonts\Raleway-Italic.ttf" />
+    <Content Include="Fonts\Raleway-Light.ttf" />
+    <Content Include="Fonts\Raleway-LightItalic.ttf" />
+    <Content Include="Fonts\Raleway-Medium.ttf" />
+    <Content Include="Fonts\Raleway-MediumItalic.ttf" />
+    <Content Include="Fonts\Raleway-Regular.ttf" />
+    <Content Include="Fonts\Raleway-SemiBold.ttf" />
+    <Content Include="Fonts\Raleway-SemiBoldItalic.ttf" />
+    <Content Include="Fonts\Raleway-Thin.ttf" />
+    <Content Include="Fonts\Raleway-ThinItalic.ttf" />
+    <Content Include="Fonts\scss\font-awesome.scss" />
+    <Content Include="Fonts\scss\_animated.scss" />
+    <Content Include="Fonts\scss\_bordered-pulled.scss" />
+    <Content Include="Fonts\scss\_core.scss" />
+    <Content Include="Fonts\scss\_fixed-width.scss" />
+    <Content Include="Fonts\scss\_icons.scss" />
+    <Content Include="Fonts\scss\_larger.scss" />
+    <Content Include="Fonts\scss\_list.scss" />
+    <Content Include="Fonts\scss\_mixins.scss" />
+    <Content Include="Fonts\scss\_path.scss" />
+    <Content Include="Fonts\scss\_rotated-flipped.scss" />
+    <Content Include="Fonts\scss\_stacked.scss" />
+    <Content Include="Fonts\scss\_variables.scss" />
+    <Content Include="Js\.DS_Store" />
+    <Content Include="obj\Debug\Alice Online.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Release\Alice Online.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Alice.Master" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Fonts\.DS_Store" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Fonts\codropsicons\.DS_Store" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Fonts\codropsicons\codropsicons.eot" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Fonts\codropsicons\codropsicons.ttf" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Fonts\codropsicons\codropsicons.woff" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Fonts\linecons\linecons.eot" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Fonts\linecons\linecons.ttf" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Fonts\linecons\linecons.woff" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\packages.config" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery-2.1.4.min.map" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Alice.Master" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Fonts\.DS_Store" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Fonts\codropsicons\.DS_Store" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Fonts\codropsicons\codropsicons.eot" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Fonts\codropsicons\codropsicons.ttf" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Fonts\codropsicons\codropsicons.woff" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Fonts\linecons\linecons.eot" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Fonts\linecons\linecons.ttf" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Fonts\linecons\linecons.woff" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\packages.config" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\PrecompiledApp.config" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery-2.1.4.min.map" />
+    <Content Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Release\Package\PackageTmp\Alice.Master" />
+    <Content Include="obj\Release\Package\PackageTmp\Fonts\.DS_Store" />
+    <Content Include="obj\Release\Package\PackageTmp\Fonts\codropsicons\.DS_Store" />
+    <Content Include="obj\Release\Package\PackageTmp\Fonts\codropsicons\codropsicons.eot" />
+    <Content Include="obj\Release\Package\PackageTmp\Fonts\codropsicons\codropsicons.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\Fonts\codropsicons\codropsicons.woff" />
+    <Content Include="obj\Release\Package\PackageTmp\Fonts\linecons\linecons.eot" />
+    <Content Include="obj\Release\Package\PackageTmp\Fonts\linecons\linecons.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\Fonts\linecons\linecons.woff" />
+    <Content Include="obj\Release\Package\PackageTmp\packages.config" />
+    <Content Include="obj\Release\Package\PackageTmp\PrecompiledApp.config" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery-2.1.4.min.map" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <None Include="bin\Alice Web.dll.config" />
+    <None Include="Properties\PublishProfiles\Test.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Alice Online.csproj" />
+    <Content Include="Alice Online.csproj.user" />
+    <Content Include="Aporia.aspx" />
+    <Content Include="bin\System.Management.Automation.dll" />
+    <Content Include="CheckFolderApprovers.aspx" />
+    <Content Include="Comparo.aspx" />
+    <Content Include="ConvertGenericAccount.aspx" />
+    <Content Include="CreateADGroup.aspx" />
+    <Content Include="CreateFolderPermissionGroup.aspx" />
+    <Content Include="CreateGenericAccount.aspx" />
+    <Content Include="CreateResourceCalendar.aspx" />
+    <Content Include="CreateServerGroup.aspx" />
+    <Content Include="CreateSharedMailbox.aspx" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\linecons.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\navbar.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\raleway.css" />
+    <Content Include="FeedTest.aspx" />
+    <Content Include="Fonts\css\font-awesome.css" />
+    <Content Include="Fonts\css\font-awesome.min.css" />
+    <Content Include="Fonts\linecons\license.txt" />
+    <Content Include="Fonts\linecons\linecons.dev.svg" />
+    <Content Include="Fonts\linecons\linecons.svg" />
+    <Content Include="Fonts\linecons\lte-ie7.js" />
+    <Content Include="Fonts\linecons\Read Me.txt" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\abouticon.png" />
+    <Content Include="images\alicebackground.png" />
+    <Content Include="images\alicebutton.png" />
+    <Content Include="images\AliceIcon.ico" />
+    <Content Include="images\aporialogo.png" />
+    <Content Include="images\contacticon.png" />
+    <Content Include="images\createacglogo.png" />
+    <Content Include="images\createagglogo.png" />
+    <Content Include="images\createapplogo.png" />
+    <Content Include="images\createcalendarlogo.png" />
+    <Content Include="images\createdglogo.png" />
+    <Content Include="images\createdmdllogo.png" />
+    <Content Include="images\createfolderpermissiongrouplogo.png" />
+    <Content Include="images\creategenalogo.png" />
+    <Content Include="images\createmailboxlogo.png" />
+    <Content Include="images\createradllogo.png" />
+    <Content Include="images\createservergrouplogo.png" />
+    <Content Include="images\createsmdllogo.png" />
+    <Content Include="images\createuserlogo.png" />
+    <Content Include="images\homeicon.png" />
+    <Content Include="images\maclogo.png" />
+    <Content Include="images\modifygenalogo.png" />
+    <Content Include="images\navicon.png" />
+    <Content Include="images\progress_bluegrey_empty.gif" />
+    <Content Include="images\progress_bluegrey_full.gif" />
+    <Content Include="images\progress_bluegrey_left.gif" />
+    <Content Include="images\progress_bluegrey_right.gif" />
+    <Content Include="images\progress_classic_empty.gif" />
+    <Content Include="images\progress_classic_full.gif" />
+    <Content Include="images\progress_classic_left.gif" />
+    <Content Include="images\progress_classic_right.gif" />
+    <Content Include="images\progress_ie7_empty.gif" />
+    <Content Include="images\progress_ie7_full.gif" />
+    <Content Include="images\progress_ie7_left.gif" />
+    <Content Include="images\progress_ie7_right.gif" />
+    <Content Include="images\progress_ie_empty.gif" />
+    <Content Include="images\progress_ie_full.gif" />
+    <Content Include="images\progress_ie_green.gif" />
+    <Content Include="images\progress_ie_left.gif" />
+    <Content Include="images\progress_ie_right.gif" />
+    <Content Include="images\progress_ie_white.gif" />
+    <Content Include="images\renamecalendarlogo.png" />
+    <Content Include="images\renamemailboxlogo.png" />
+    <Content Include="images\servicesicon.png" />
+    <Content Include="images\therearenocentaursinoxford.png" />
+    <Content Include="images\uploadbutton.PNG" />
+    <Content Include="images\usericon.png" />
+    <Content Include="images\viewfolderpermissiongrouplogo.png" />
+    <Content Include="images\viewservergroupslogo.png" />
+    <Content Include="images\weblogo-alt.png" />
+    <Content Include="images\weblogo.png" />
+    <Content Include="Js\classie.js" />
+    <Content Include="Js\jquery.animsition.min.js" />
+    <Content Include="Js\jquery.min.js" />
+    <Content Include="Js\mlpushmenu.js" />
+    <Content Include="Js\modernizr.custom.js" />
+    <Content Include="Js\popup.js" />
+    <Content Include="libexif.dll" />
+    <Content Include="obj\Debug\Alice Online.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Alice Online.dll" />
+    <Content Include="obj\Debug\Alice Online.pdb" />
+    <Content Include="obj\Release\Alice Online.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Alice Online.dll" />
+    <Content Include="obj\Release\Alice Online.pdb" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\About.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Alice.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Aporia.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\Alice Online.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\bin\System.Management.Automation.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\CheckFolderApprovers.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Comparo.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\component.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\ConvertGenericAccount.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\CreateADGroup.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\CreateFolderPermissionGroup.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\CreateGenericAccount.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\CreateResourceCalendar.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\CreateServerGroup.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\CreateSharedMailbox.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\demo.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Fonts\codropsicons\codropsicons.svg" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Fonts\codropsicons\license.txt" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Fonts\linecons\license.txt" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Fonts\linecons\linecons.dev.svg" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Fonts\linecons\linecons.svg" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Fonts\linecons\lte-ie7.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Fonts\linecons\Read Me.txt" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Home.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\icons.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\abouticon.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\alicebackground.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\alicebutton.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\AliceIcon.ico" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\aporialogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\contacticon.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\createacglogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\createagglogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\createapplogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\createcalendarlogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\createdglogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\createdmdllogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\createfolderpermissiongrouplogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\creategenalogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\createmailboxlogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\createradllogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\createservergrouplogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\createsmdllogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\createuserlogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\homeicon.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\maclogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\modifygenalogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\navicon.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\renamecalendarlogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\renamemailboxlogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\servicesicon.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\usericon.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\viewfolderpermissiongrouplogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\viewservergroupslogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Images\weblogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Js\classie.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Js\mlpushmenu.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Js\modernizr.custom.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Js\popup.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\normalize.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\popup.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\PopupMenus\AD Groups.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\PopupMenus\AD Queries.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\PopupMenus\Calendars.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\PopupMenus\Favorites.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\PopupMenus\Gen. Accounts.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\PopupMenus\Mailboxes.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\PopupMenus\PopupStyle.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\PopupMenus\Server Groups.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\PopupMenus\Shared Folders.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\RenameSharedMailbox.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery-2.1.4.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\Scripts\jquery-2.1.4.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\ViewFolderPermissionGroup.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\Source\ViewServerGroup.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\About.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Alice.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Aporia.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\Alice Online.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\bin\System.Management.Automation.dll" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\CheckFolderApprovers.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Comparo.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\component.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\ConvertGenericAccount.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\CreateADGroup.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\CreateFolderPermissionGroup.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\CreateGenericAccount.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\CreateResourceCalendar.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\CreateServerGroup.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\CreateSharedMailbox.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\demo.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Fonts\codropsicons\codropsicons.svg" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Fonts\codropsicons\license.txt" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Fonts\linecons\license.txt" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Fonts\linecons\linecons.dev.svg" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Fonts\linecons\linecons.svg" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Fonts\linecons\lte-ie7.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Fonts\linecons\Read Me.txt" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Home.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\icons.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\abouticon.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\alicebackground.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\alicebutton.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\AliceIcon.ico" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\aporialogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\contacticon.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\createacglogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\createagglogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\createapplogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\createcalendarlogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\createdglogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\createdmdllogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\createfolderpermissiongrouplogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\creategenalogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\createmailboxlogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\createradllogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\createservergrouplogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\createsmdllogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\createuserlogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\homeicon.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\maclogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\modifygenalogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\navicon.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\renamecalendarlogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\renamemailboxlogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\servicesicon.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\usericon.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\viewfolderpermissiongrouplogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\viewservergroupslogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Images\weblogo.png" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Js\classie.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Js\mlpushmenu.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Js\modernizr.custom.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Js\popup.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\normalize.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\popup.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\PopupMenus\AD Groups.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\PopupMenus\AD Queries.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\PopupMenus\Calendars.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\PopupMenus\Favorites.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\PopupMenus\Gen. Accounts.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\PopupMenus\Mailboxes.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\PopupMenus\PopupStyle.css" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\PopupMenus\Server Groups.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\PopupMenus\Shared Folders.html" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\RenameSharedMailbox.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery-2.1.4.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\Scripts\jquery-2.1.4.min.js" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\ViewFolderPermissionGroup.aspx" />
+    <Content Include="obj\Release\AspnetCompileMerge\TempBuildDir\ViewServerGroup.aspx" />
+    <Content Include="obj\Release\Package\Alice Online.SourceManifest.xml" />
+    <Content Include="obj\Release\Package\FilePreviewParameter.xml" />
+    <Content Include="obj\Release\Package\PackageTmp\About.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Alice.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Aporia.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Alice Online.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\System.Management.Automation.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\CheckFolderApprovers.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Comparo.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\component.css" />
+    <Content Include="obj\Release\Package\PackageTmp\ConvertGenericAccount.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\CreateADGroup.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\CreateFolderPermissionGroup.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\CreateGenericAccount.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\CreateResourceCalendar.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\CreateServerGroup.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\CreateSharedMailbox.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\demo.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Fonts\codropsicons\codropsicons.svg" />
+    <Content Include="obj\Release\Package\PackageTmp\Fonts\codropsicons\license.txt" />
+    <Content Include="obj\Release\Package\PackageTmp\Fonts\linecons\license.txt" />
+    <Content Include="obj\Release\Package\PackageTmp\Fonts\linecons\linecons.dev.svg" />
+    <Content Include="obj\Release\Package\PackageTmp\Fonts\linecons\linecons.svg" />
+    <Content Include="obj\Release\Package\PackageTmp\Fonts\linecons\lte-ie7.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Fonts\linecons\Read Me.txt" />
+    <Content Include="obj\Release\Package\PackageTmp\Home.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\icons.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\abouticon.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\alicebackground.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\alicebutton.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\AliceIcon.ico" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\aporialogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\contacticon.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\createacglogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\createagglogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\createapplogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\createcalendarlogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\createdglogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\createdmdllogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\createfolderpermissiongrouplogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\creategenalogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\createmailboxlogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\createradllogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\createservergrouplogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\createsmdllogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\createuserlogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\homeicon.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\maclogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\modifygenalogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\navicon.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\renamecalendarlogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\renamemailboxlogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\servicesicon.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\usericon.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\viewfolderpermissiongrouplogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\viewservergroupslogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Images\weblogo.png" />
+    <Content Include="obj\Release\Package\PackageTmp\Js\classie.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Js\mlpushmenu.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Js\modernizr.custom.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Js\popup.js" />
+    <Content Include="obj\Release\Package\PackageTmp\normalize.css" />
+    <Content Include="obj\Release\Package\PackageTmp\popup.css" />
+    <Content Include="obj\Release\Package\PackageTmp\PopupMenus\AD Groups.html" />
+    <Content Include="obj\Release\Package\PackageTmp\PopupMenus\AD Queries.html" />
+    <Content Include="obj\Release\Package\PackageTmp\PopupMenus\Calendars.html" />
+    <Content Include="obj\Release\Package\PackageTmp\PopupMenus\Favorites.html" />
+    <Content Include="obj\Release\Package\PackageTmp\PopupMenus\Gen. Accounts.html" />
+    <Content Include="obj\Release\Package\PackageTmp\PopupMenus\Mailboxes.html" />
+    <Content Include="obj\Release\Package\PackageTmp\PopupMenus\PopupStyle.css" />
+    <Content Include="obj\Release\Package\PackageTmp\PopupMenus\Server Groups.html" />
+    <Content Include="obj\Release\Package\PackageTmp\PopupMenus\Shared Folders.html" />
+    <Content Include="obj\Release\Package\PackageTmp\RenameSharedMailbox.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery-2.1.4.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery-2.1.4.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\ViewFolderPermissionGroup.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\ViewServerGroup.aspx" />
+    <Content Include="obj\Release\_WPPLastBuildInfo.txt" />
+    <Content Include="PopupMenus\AD Groups.html" />
+    <Content Include="PopupMenus\AD Queries.html" />
+    <Content Include="PopupMenus\Calendars.html" />
+    <Content Include="PopupMenus\Favorites.html" />
+    <Content Include="PopupMenus\Gen. Accounts.html" />
+    <Content Include="PopupMenus\Mailboxes.html" />
+    <Content Include="PopupMenus\PopupStyle.css" />
+    <Content Include="PopupMenus\Server Groups.html" />
+    <Content Include="PopupMenus\Shared Folders.html" />
+    <Content Include="RenameSharedMailbox.aspx" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="ViewFolderPermissionGroup.aspx" />
+    <Content Include="ViewServerGroup.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alice.Master.cs">
+      <DependentUpon>Alice.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alice.Master.designer.cs">
+      <DependentUpon>Alice.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Aporia.aspx.cs">
+      <DependentUpon>Aporia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aporia.aspx.designer.cs">
+      <DependentUpon>Aporia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckFolderApprovers.aspx.cs">
+      <DependentUpon>CheckFolderApprovers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckFolderApprovers.aspx.designer.cs">
+      <DependentUpon>CheckFolderApprovers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comparo.aspx.cs">
+      <DependentUpon>Comparo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comparo.aspx.designer.cs">
+      <DependentUpon>Comparo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConvertGenericAccount.aspx.cs">
+      <DependentUpon>ConvertGenericAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConvertGenericAccount.aspx.designer.cs">
+      <DependentUpon>ConvertGenericAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateADGroup.aspx.cs">
+      <DependentUpon>CreateADGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateADGroup.aspx.designer.cs">
+      <DependentUpon>CreateADGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateFolderPermissionGroup.aspx.cs">
+      <DependentUpon>CreateFolderPermissionGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateFolderPermissionGroup.aspx.designer.cs">
+      <DependentUpon>CreateFolderPermissionGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateGenericAccount.aspx.cs">
+      <DependentUpon>CreateGenericAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateGenericAccount.aspx.designer.cs">
+      <DependentUpon>CreateGenericAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateResourceCalendar.aspx.cs">
+      <DependentUpon>CreateResourceCalendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateResourceCalendar.aspx.designer.cs">
+      <DependentUpon>CreateResourceCalendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateServerGroup.aspx.cs">
+      <DependentUpon>CreateServerGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateServerGroup.aspx.designer.cs">
+      <DependentUpon>CreateServerGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateSharedMailbox.aspx.cs">
+      <DependentUpon>CreateSharedMailbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateSharedMailbox.aspx.designer.cs">
+      <DependentUpon>CreateSharedMailbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedTest.aspx.cs">
+      <DependentUpon>FeedTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedTest.aspx.designer.cs">
+      <DependentUpon>FeedTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RenameSharedMailbox.aspx.cs">
+      <DependentUpon>RenameSharedMailbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RenameSharedMailbox.aspx.designer.cs">
+      <DependentUpon>RenameSharedMailbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFolderPermissionGroup.aspx.cs">
+      <DependentUpon>ViewFolderPermissionGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewFolderPermissionGroup.aspx.designer.cs">
+      <DependentUpon>ViewFolderPermissionGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewServerGroup.aspx.cs">
+      <DependentUpon>ViewServerGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewServerGroup.aspx.designer.cs">
+      <DependentUpon>ViewServerGroup.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fonts\codropsicons\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Debug\__testMsDeployConnection__\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49301</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49301/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

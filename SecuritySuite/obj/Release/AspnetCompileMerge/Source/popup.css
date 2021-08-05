@@ -1,0 +1,28 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body {
+    background: #363B48;
+    font-family: Montserrat;
+    overflow:hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h2 { 
+  margin:150px auto 50px;
+  text-align:center;
+  font-size:18px;
+  text-transform:uppercase;
+  background:#2e333f;
+  padding:25px;
+  display:block;
+  cursor:default;
+  width:370px;
+  color:#cacaca;
+  border:1px solid rgba(173, 173, 173, 0.15);
+}
+}
